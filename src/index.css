@@ -1,1 +1,5 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+.icon-active {
+    @apply bg-rose-200 text-rose-500
+}
