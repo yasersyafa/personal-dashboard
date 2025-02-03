@@ -2,8 +2,16 @@ import Card from "../../components/Card"
 import { FaRegFolderOpen } from "react-icons/fa";
 import { FaRegNoteSticky } from "react-icons/fa6";
 import { RiTodoLine } from "react-icons/ri";
+import useAuth from "../../hooks/useAuth";
+import { useNavigate } from "react-router";
 
 const DashboardPage = () => {
+    const navigate = useNavigate()
+    const {isAuthenticated} = useAuth()
+    if(!isAuthenticated) {
+        console.log(isAuthenticated)
+        navigate("/")
+    }
     return (
         <div>
             <h1>Organize your project, task, and notes in one app</h1>

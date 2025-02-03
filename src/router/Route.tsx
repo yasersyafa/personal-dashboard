@@ -11,7 +11,7 @@ import LoginPage from "../pages/auth/LoginPage"
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <HomePage />
+        element: <HomePage />,
     },
     {
         path: '/dashboard',
